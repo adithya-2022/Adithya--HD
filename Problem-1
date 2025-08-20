@@ -1,0 +1,26 @@
+class Calculator:
+    def __init__(self, a: float, b: float, operation: str):
+        self.a = a
+        self.b = b
+        self.operation = operation.lower()
+
+        if self.operation == "add" or self.operation == "+":
+            print("Result:", self.a + self.b)
+        elif self.operation == "subtract" or self.operation == "-":
+            print("Result:", self.a - self.b)
+        elif self.operation == "multiply" or self.operation == "*":
+            print("Result:", self.a * self.b)
+        elif self.operation == "divide" or self.operation == "/":
+            if self.b != 0:
+                print("Result:", self.a / self.b)
+            else:
+                print("Error: Division by zero")
+        else:
+            print("Invalid operation")
+
+
+# Example runs
+Calculator(10.5, 5.2, "add")       # Result: 15.7
+Calculator(20, 4, "/")            # Result: 5.0
+Calculator(7, 0, "divide")        # Error: Division by zero
+Calculator(12, 3, "multiply")     # Result: 36
